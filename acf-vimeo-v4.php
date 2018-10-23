@@ -149,8 +149,22 @@ class acf_field_vimeo extends acf_field
 		// RETURN EMBED
 		if( $field['return_format'] == "embed" )
 		{
-			return apply_filters('acf_vimeo_embed', '<iframe src="//player.vimeo.com/video/' . $vimeo_id . '" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>', $vimeo_id); 
-		}
+            	    $out = sprintf('
+                        <div class="video-container">
+                           <iframe src="//player.vimeo.com/video/%s" 
+                                   width="%s" 
+                                   frameborder="0" 
+                                   webkitallowfullscreen 
+                                   mozallowfullscreen 
+                                   allowfullscreen
+                           >
+                           </iframe>
+                       </div>',
+                       $vimeo_id, '100%'
+                     );
+
+		     return apply_filters('acf_vimeo_embed', $out, $vimeo_id);
+		}	
 		
 		
 		// RETURN THUMBNAIL
