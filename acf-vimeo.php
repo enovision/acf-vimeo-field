@@ -35,3 +35,10 @@ function register_fields_vimeo()
 }
 
 add_action('acf/register_fields', 'register_fields_vimeo');
+
+// Add responsive CSS
+function include_field_types_vimeo_css() {
+    wp_enqueue_style( 'acf-vimeo-css', plugins_url( null, __FILE__ ) . '/assets/css/responsive.min.css' );
+}
+
+add_action( 'wp_print_styles', 'include_field_types_vimeo_css' );
