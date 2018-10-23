@@ -1,4 +1,5 @@
 # Advanced Custom Fields - Vimeo Field
+### Now responsive !!!
 Syncs up with the Vimeo OPEN API to give you a greater amount of flexibility than just using a text field.
 
 ![Vimeo ACF Field](https://halgatewood.com/wp-content/uploads/edd/2014/03/acf-vimeo-field.png)
